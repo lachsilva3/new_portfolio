@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar" id="navbar">
+      <a href="#" class="nav-logo">WebDev</a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#skillsID" class="nav-link">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="https://github.com/lachsilva3?tab=repositories" class="nav-link">GitHub Repositories</a>
+        </li>
+        <li class="nav-item">
+          <a href="#expid" class="nav-link">Experiences</a>
+        </li>
+        <li class="nav-item">
+          <a href="#footer" class="nav-link">Contact</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+  <div class="landing" id="land">
+    <div class="container">
+      <div class="info">
+        <p>HI THERE !</p>
+        <h2>I am  <span>Lachlan Da Silva 😎✌️</span></h2>
+        <p class="details">
+          I love to create beautiful and functional
+          websites.
+        </p>
+      </div>
+      <div class="photo">
+        <img src="./images/profile.png" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+
+  <section class="skills" id="skillsID">
+    <h1>Projects</h1>
+    <div class="skills_card_container">
+      <div class="skill_card">
+        <h3>First Website</h3><br>
+        <p>
+          A simple test website Implemented using HTML5 and CSS
+          link:- <a href="https://xlachlanx.netlify.app">https://xlachlanx.netlify.app</a>
+        </p>
+      </div>
+      <div class="skill_card">
+        <h3>Github Tracker Application</h3><br>
+        <p>
+          Where GitHub Repositories of an Employee is being tracked to check weather the repository created by an employee is
+public or private.
+If some one created a public repository then the application will be able to track and send notification(i.e  email) to the
+admin and  warn the employee by sending an email to change status to private.Implemented using NestJs for API
+ReactJs for UserInterface , Postgres for Database( using Docker), GitHub API to fetch the user data.
+
+        </p>
+      </div>
+      <div class="skill_card">
+        <h3>BE Project</h3><br>
+        <p>
+          Real time tracking of attendance<br>
+          is a modern approach of tracking attendance in schools, universities, and businesses. The system utilizes facial recognition technology to identify individuals and record their attendance automatically. The system works by capturing an image of an individual's face and comparing it to a database of known faces to determine the individual's identity. Once the identity is confirmed, the attendance is recorded. 
+          The web application using ReactJS and NestJS as an API for the face recognition attendance system can be used to streamline attendance tracking for institutions and businesses.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="experiences" id="expid">
+    <h1>My Experiences</h1>
+    <div class="exp_card_container">
+      <div class="exp_card">
+      
+        <h3>Intership At Creative Capsule ,  Verna- Goa </h3><br>
+        <p>
+          ●	Cloned the W3school Website using HTML and CSS.<br><br>
+          ●	Implemented a Quotes Frontend App using ReactJS, used JavaScript to fetch the REST API’s.<br><br>
+          ●	Implemented the Quotes Backend App using Nest JS.<br><br>
+          ●	Worked on the GitHub Repository Tracker Application.<br><br>
+          Mentor: Ivo Costa || 9823163587 || ivo.costa@creativecapsule.com
+
+        </p>
+      </div>
+    
+    </div>
+  </section>
+  <footer id="footer">
+    <p class="Contact-text">Get in touch</p>
+    <div class="img-container">
+
+    
+
+
+     <a href="https://github.com/lachsilva3"> <img src="./images/icons8-github.svg" alt="Github" ></a>
+     <a  href="https://in.linkedin.com/in/lachlan-da-silva-002b31242"> <img src="./images/icons8-linkedin.svg" alt="linkedin"></a>
+     <a href="https://www.instagram.com/lachlan_dasilva/"> <img src="./images/icons8-instagram.svg" alt="instagram"></a>
+    </div>
+  </footer>
+</body>
+
+</html>

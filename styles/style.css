@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Urbanist:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+.header {
+  background: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
+  background: black;
+  position: fixed;
+  z-index: 5; 
+  transition: 00.3s;
+}
+.navbar a {
+  color: white;
+}
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3%;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.nav-link:hover {
+  color: red;
+}
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: 500;
+}
+
+.active {
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+.landing {
+  height: 91vh;
+  color: white;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  padding: 50px;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.photo {
+  min-width: 200px;
+  min-height: 370px;
+  background-color: red;
+  position: relative;
+  display: flex;
+  border-top-left-radius: 2%;  
+  border-top-right-radius: 2%;
+  justify-content: center;
+  align-items: center;
+}
+.photo::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 5px solid red;
+  border-top-left-radius: 2%;  
+  border-top-right-radius: 2%;
+  border-bottom-left-radius: 2%;  
+  border-bottom-right-radius: 2%;
+  animation: animate 1.5s linear infinite;
+}
+.photo img {
+  max-width: 250px;
+}
+.info{
+  margin-top:2rem;
+}
+.info p:nth-child(1) {
+  font-size: 1.8rem;
+}
+.info h2 {
+  font-size: 3rem;
+}
+.info span {
+  color: red;
+}
+.details {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+@keyframes animate {
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column-reverse;
+    padding-bottom: 50%;
+  }
+  .photo {
+    min-width: 200px;
+    min-height: 300px;
+    margin-top: 25%;
+  }
+  .container h2{
+    font-size: 40px;
+  }
+
+  .photo img {
+    max-width: 220px;
+  }
+  .container .details{
+    font-size:15px ;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+  }
+
+  .nav-menu.active {
+    left: 0;
+    background: black;
+    z-index: 50;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    /* cursor: pointer; */
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .switch {
+    margin-top: 15px;
+    margin-left: 0px;
+  }
+  .landing{
+    padding-top: 8rem;
+  }
+}
+
+.skills {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.skills h1 {
+  font-size: 40px;
+}
+.skills_card_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+.skill_card {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+  padding: 60px 40px;
+  text-align: center;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-overflow: ellipsis;
+  background-color: rgb(22, 22, 22);
+  /* cursor: pointer; */
+  transition: all 0.5s ease;
+}
+.skill_card h3 {
+  font-size: 30px;
+}
+.skill_card p {
+  font-weight: 100;
+}
+.skill_card:hover {
+  transition: all 0.5s ease;
+  background-color: white;
+  box-shadow: 2px 5px 10px red;
+  color: black;
+}
+.experiences {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+section h1{
+  font-size: 40px;
+}
+
+.exp_card_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+.exp_card {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+  padding: 60px 40px;
+  text-align: center;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-overflow: ellipsis;
+  background-color: rgb(22, 22, 22);
+  /* cursor: pointer; */
+  transition: all 0.5s ease;
+}
+.exp_card h3 {
+  font-size: 25px;
+}
+.exp_card p {
+  font-weight: 50;
+}
+.exp_card:hover {
+  transition: all 0.5s ease;
+  background-color: white;
+  box-shadow: 2px 5px 10px red;
+  color: black;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1.5em 0;
+}
+
+.Contact-text {
+  font-size: 1.5em;
+  font-weight: 800;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.img-container a img {
+  height: 35px;
+  padding: 0 0.8em;
+}
+
+
+.terms {
+  color: rgb(62, 62, 62);
+}
+
+@media (max-width: 530px) {
+  .skill_card {
+    width: 100%;
+    max-width: auto;
+    margin: 20px 0;
+  }
+  .skills_card_container {
+    padding: 20px 0;
+  }
+}
+
+
+
+footer a
+{
+ 
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+
+
+
+footer a:after
+{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+
+}
+
+footer a:hover:after
+{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
