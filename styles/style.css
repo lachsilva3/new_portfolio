@@ -93,8 +93,11 @@ a {
   width: 100%;
 }
 .photo {
+  min-width: 200px;
+  min-height: 350px;
   background-color:rgb(194, 22, 22);
   position: relative;
+display: flex;
   border-top-left-radius: 2%;  
   border-top-right-radius: 2%;
   justify-content: center;
